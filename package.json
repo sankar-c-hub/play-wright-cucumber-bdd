@@ -1,0 +1,19 @@
+{
+  "name": "play-wright-cucumber-bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js && node generate-report.js",
+    "test:report": "cucumber-js --format json:reports/cucumber-report.json && node generate-report.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.6.0",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.3",
+    "cucumber-html-reporter": "^7.2.0"
+  }
+}

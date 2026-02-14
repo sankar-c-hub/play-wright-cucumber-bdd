@@ -7,3 +7,7 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 /reports/
+screenshots/
+videos/
+trace/
+package-lock.json
