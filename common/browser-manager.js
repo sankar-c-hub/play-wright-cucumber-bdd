@@ -9,6 +9,8 @@ class BrowserManager {
     static async launchBrowser() {
         const browserType = JsonUtility.getConfigValue('browser') || 'chromium';
         const headless = JsonUtility.getConfigValue('headless') !== false;
+        const docker = JsonUtility.getConfigValue('docker') === true;
+        const dockerEndpoint = JsonUtility.getConfigValue('dockerport') || 'ws://localhost:3000';
 
         const browserMap = {
             chromium: chromium,
@@ -18,28 +20,33 @@ class BrowserManager {
         };
 
         const browserEngine = browserMap[browserType.toLowerCase()] || chromium;
-        
-        this.browser = await browserEngine.launch({ 
-            headless: headless,
-            slowMo: 50
-        });
-        
-        console.log(`Browser launched: ${browserType}`);
+
+        if (docker) {
+            // Connect to Docker container browser
+            const wsEndpoint = dockerEndpoint.startsWith('ws://') || dockerEndpoint.startsWith('wss://')
+                ? dockerEndpoint
+                : `ws://${dockerEndpoint}`;
+
+            console.log(`Connecting to Docker browser at: ${wsEndpoint}`);
+            this.browser = await chromium.connect(wsEndpoint);
+        } else {
+            // Launch local browser
+            this.browser = await browserEngine.launch({ headless: headless, slowMo: 50 });
+        }
     }
 
     static async createContext() {
         if (!this.browser) {
             throw new Error('Browser not launched. Call launchBrowser() first.');
         }
-        
+
         this.context = await this.browser.newContext({
             viewport: { width: 1920, height: 1080 }
         });
-        
+
         this.page = await this.context.newPage();
-        
+
         const url = JsonUtility.getConfigValue('url');
-        console.log(`Navigating to: ${url}`);
         await this.page.goto(url, { waitUntil: 'domcontentloaded' });
     }
 
@@ -70,12 +77,10 @@ class BrowserManager {
         try {
             // Close any remaining contexts first
             await this.closeContext();
-            
             if (this.browser) {
                 await this.browser.close();
                 this.browser = null;
             }
-            console.log('Browser closed');
         } catch (error) {
             console.error('Error closing browser:', error.message);
         }
