@@ -6,5 +6,7 @@
     "parallel": false,
     "_runOn_comment": "local or lambdatest",
     "runOn": "local",
-    "lambdatest": "LT_USERNAME,LT_ACCESS_KEY"
+    "lambdatest": "LT_USERNAME,LT_ACCESS_KEY",
+    "dockerport": "0.0.0.0:4000",
+    "docker": false
 }
