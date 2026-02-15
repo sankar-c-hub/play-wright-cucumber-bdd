@@ -25,8 +25,8 @@ Feature: ubuntu setup prod1
 
     Examples:
       | SlNo. | page          | content |
-      |     1 | Demo Web Shop | NA      |
-#Total No. of Test Cases : 1
+      | 1     | Demo Web Shop | NA      |
+  #Total No. of Test Cases : 1
 
   @Verify_error_with_invalid_username @uid924592891 @set21 @test002 @Id697821635fbefd33669444cf
   Scenario Outline: Verify error with invalid username
@@ -52,8 +52,8 @@ Feature: ubuntu setup prod1
 
     Examples:
       | SlNo. | page          | content |
-      |     1 | Demo Web Shop | NA      |
-#Total No. of Test Cases : 2
+      | 1     | Demo Web Shop | NA      |
+  #Total No. of Test Cases : 2
 
   @Verify_error_with_invalid_password @uid924592891 @set21 @test003 @Id697821635fbefd33669444d0
   Scenario Outline: Verify error with invalid password
@@ -79,8 +79,8 @@ Feature: ubuntu setup prod1
 
     Examples:
       | SlNo. | page          | content |
-      |     1 | Demo Web Shop | NA      |
-#Total No. of Test Cases : 3
+      | 1     | Demo Web Shop | NA      |
+  #Total No. of Test Cases : 3
 
   @Verify_login_with_blank_username_and_password @uid924592891 @set21 @test004 @Id697821635fbefd33669444d1
   Scenario Outline: Verify login with blank username and password
@@ -106,8 +106,8 @@ Feature: ubuntu setup prod1
 
     Examples:
       | SlNo. | page          | content |
-      |     1 | Demo Web Shop | NA      |
-#Total No. of Test Cases : 4
+      | 1     | Demo Web Shop | NA      |
+  #Total No. of Test Cases : 4
 
   @Verify_password_masking @uid924592891 @set21 @test005 @Id697821635fbefd33669444d2
   Scenario Outline: Verify password masking
@@ -133,8 +133,8 @@ Feature: ubuntu setup prod1
 
     Examples:
       | SlNo. | page          | content |
-      |     1 | Demo Web Shop | NA      |
-#Total No. of Test Cases : 5
+      | 1     | Demo Web Shop | NA      |
+  #Total No. of Test Cases : 5
 
   @Verify_Show_Password_functionality @uid924592891 @set21 @test006 @Id697821635fbefd33669444d3
   Scenario Outline: Verify Show Password functionality
@@ -160,8 +160,8 @@ Feature: ubuntu setup prod1
 
     Examples:
       | SlNo. | page          | content |
-      |     1 | Demo Web Shop | NA      |
-#Total No. of Test Cases : 6
+      | 1     | Demo Web Shop | NA      |
+  #Total No. of Test Cases : 6
 
   @Verify_login_button_is_disabled_until_credentials_entered @uid924592891 @set21 @test007 @Id697821635fbefd33669444d4
   Scenario Outline: Verify login button is disabled until credentials entered
@@ -187,8 +187,8 @@ Feature: ubuntu setup prod1
 
     Examples:
       | SlNo. | page          | content |
-      |     1 | Demo Web Shop | NA      |
-#Total No. of Test Cases : 7
+      | 1     | Demo Web Shop | NA      |
+  #Total No. of Test Cases : 7
 
   @Verify_user_redirection_after_logout @uid924592891 @set21 @test008 @Id697821635fbefd33669444d5
   Scenario Outline: Verify user redirection after logout
@@ -214,8 +214,8 @@ Feature: ubuntu setup prod1
 
     Examples:
       | SlNo. | page          | content |
-      |     1 | Demo Web Shop | NA      |
-#Total No. of Test Cases : 8
+      | 1     | Demo Web Shop | NA      |
+  #Total No. of Test Cases : 8
 
   @Verify_case_sensitivity_in_login_credentials @uid924592891 @set21 @test009 @Id697821635fbefd33669444d6
   Scenario Outline: Verify case sensitivity in login credentials
@@ -241,8 +241,8 @@ Feature: ubuntu setup prod1
 
     Examples:
       | SlNo. | page          | content |
-      |     1 | Demo Web Shop | NA      |
-#Total No. of Test Cases : 9
+      | 1     | Demo Web Shop | NA      |
+  #Total No. of Test Cases : 9
 
   @Verify_Remember_Me_checkbox_functionality @uid924592891 @set21 @test010 @Id697821635fbefd33669444d7
   Scenario Outline: Verify Remember Me checkbox functionality
@@ -268,5 +268,5 @@ Feature: ubuntu setup prod1
 
     Examples:
       | SlNo. | page          | content |
-      |     1 | Demo Web Shop | NA      |
+      | 1     | Demo Web Shop | NA      |
 #Total No. of Test Cases : 10
