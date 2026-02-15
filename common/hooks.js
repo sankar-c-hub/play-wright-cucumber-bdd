@@ -3,7 +3,6 @@ const JsonUtility = require('../utils/json_utility.js');
 const BrowserManager = require('../common/browser-manager.js');
 const ScreenshotUtil = require('../utils/screenshot_util.js');
 
-
 // Increase timeout to 60 seconds
 setDefaultTimeout(60000);
 
@@ -48,10 +47,7 @@ AfterStep(async function ({ result, pickleStep, gherkinDocument }) {
     }
 });
 
-
-
 After(async function () {
-    console.log('Closing browser...');
     await new Promise(resolve => setTimeout(resolve, 1000));
     await BrowserManager.closeBrowser();
     console.log('Browser closed successfully');
