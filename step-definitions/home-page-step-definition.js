@@ -6,7 +6,6 @@ import ScreenshotUtil from '../utils/screenshot_util.js';
 
 Given('I have access to application', async function () {
   const url = JsonUtility.getConfigValue('url');
-  console.log(`Navigating to: ${url}`);
   ScreenshotUtil.logMessages.push(`Navigating to: ${url}`);
 
 });
